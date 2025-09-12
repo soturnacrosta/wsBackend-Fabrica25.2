@@ -1,0 +1,16 @@
+# JSONPlaceholder
+
+Criando e consumindo API pública para simulação de blog, focado no recurso 'comments'.
+
+## Requisitos:
+
+* Criar uma API própria
+* A API criada pelo autor consome a API pública JSONPlaceholder
+* Um modelo em template para consumir os dados da API criada pelo autor para exibir os dados em browser
+* Relação entre as entidades 'user' e 'posts' e 'posts' e 'comments'
+* Estrutura em HTML e CSS simples e amigável
+
+## Objetivos do projeto:
+
+Criar uma API própria e consumí-la através de tecnologia Python com framework Django Rest, em ambiente VSCODE. A JSONPlaceholder
+nos permite simular um blog, que poderemos pegar comentários, modelar as relações das entidades e consumí-las através de templates.
