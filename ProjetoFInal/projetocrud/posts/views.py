@@ -10,6 +10,7 @@ API_URL_USERS = "https://jsonplaceholder.typicode.com/users/"
 
 
 class HomeView(TemplateView):
+
     template_name = 'home.html'
 
 class SincronizarView(View):
@@ -53,22 +54,22 @@ class SincronizarView(View):
 
                 continue
         
-        return redirect('list_posts')
+        return redirect('listar_posts')
 
 
 class PostListView(ListView):
 
     model = Post
-    template_name = 'posts/list_posts.html'
+    template_name = 'listar_posts.html'
     context_object_name = 'posts'
 
 
 class PostCreateView(CreateView):
 
     model = Post
-    template_name = 'posts/create_post.html'
+    template_name = 'criar_posts.html' # tem que ter o nome correto dos templates!!!
     fields = ['title', 'body']
-    success_url = reverse_lazy('list_posts')
+    success_url = reverse_lazy('listar_posts')
 
     def form_valid(self, form):
 
@@ -78,12 +79,12 @@ class PostCreateView(CreateView):
 class PostUpdateView(UpdateView):
 
     model = Post
-    template_name = 'posts/update_post.html'
+    template_name = 'atualizar_post.html'
     fields = ['title', 'body']
-    success_url = reverse_lazy('list_posts')
+    success_url = reverse_lazy('listar_posts')
 
 class PostDeleteView(DeleteView):
 
     model = Post
-    template_name = 'posts/delete_post.html'
-    success_url = reverse_lazy('list_posts')
+    template_name = 'delete_post.html' 
+    success_url = reverse_lazy('listar_posts')
