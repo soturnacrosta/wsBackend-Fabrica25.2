@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Users (models.Model):
 
-    api_id = models.IntegerField(unique=True)
+    api_id = models.IntegerField(unique=True, null = True)
     name = models.CharField(max_length=100)
     username = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
@@ -14,7 +14,7 @@ class Users (models.Model):
 
 class Post(models.Model):
    
-    api_id = models.IntegerField(unique=True)
+    api_id = models.IntegerField(unique=True, null= True)
     title = models.CharField(max_length=200)
     body = models.TextField()
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
