@@ -1,0 +1,29 @@
+<h1>Bem-vindo ao Projeto CRUD de Posts!</h1>
+<hr>
+<p>
+    Este é um projeto Django simples que demonstra um CRUD (Criar, Ler, Atualizar e Deletar) de posts, utilizando uma API externa (JSONPlaceholder) para sincronizar os dados com um banco de dados local.
+</p>
+
+<p>
+    Use os links abaixo para navegar pelas funcionalidades do projeto:
+</p>
+
+<ul>
+    <li>
+        <a href="{% url 'listar_posts' %}">Visualizar e Gerenciar os Posts</a>
+        <br>
+        <small>Veja a lista de todos os posts disponíveis em nosso banco de dados. Você poderá editar ou excluir qualquer um deles.</small>
+    </li>
+    <br>
+    <li>
+        <a href="{% url 'create_post' %}">Adicionar Novo Post</a>
+        <br>
+        <small>Crie um novo post que será salvo no nosso banco de dados.</small>
+    </li>
+    <br>
+    <li>
+        <a href="{% url 'sincronizar' %}">Sincronizar Dados da API</a>
+        <br>
+        <small>Use este link para popular o seu banco de dados com os dados da API JSONPlaceholder. Esta ação pode ser feita uma única vez para iniciar o projeto.</small>
+    </li>
+</ul>
