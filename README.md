@@ -82,3 +82,4 @@ Após rodar o servidor, acesse `http://127.0.0.1:8000/sincronizar/` no seu naveg
 
 - https://jsonplaceholder.typicode.com/
 - https://joaolucasgpc.notion.site/Class-Based-View-1a799b0a3ac58046aef1d89b8fd6846e
+
