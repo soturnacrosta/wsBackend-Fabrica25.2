@@ -14,10 +14,11 @@ class Users (models.Model):
 
 class Post(models.Model):
    
-    api_id = models.IntegerField(unique=True, null= True)
+    api_id = models.IntegerField(unique=True, null= True) # pode habilitar o null aqui!
     title = models.CharField(max_length=200)
     body = models.TextField()
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
 
     def __str__(self):
+
         return self.title

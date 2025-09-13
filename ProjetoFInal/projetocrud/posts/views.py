@@ -13,13 +13,15 @@ class HomeView(TemplateView):
 
     template_name = 'home.html'
 
-class SincronizarView(View):
+class SincronizarView(View): # importa os dados pro banco de dados
 
     def get(self, request, *args, **kwargs):
 
         users_response = requests.get(API_URL_USERS)
         users_data = users_response.json()
+
         for user_item in users_data:
+
             Users.objects.get_or_create(
                 api_id=user_item['id'],
                 defaults={
@@ -27,6 +29,7 @@ class SincronizarView(View):
                     'username': user_item['username'],
                     'email': user_item['email']
                 }
+
             )
         
         posts_response = requests.get(API_URL_POSTS)

@@ -7,7 +7,7 @@ urlpatterns = [
     path('sincronizar/', views.SincronizarView.as_view(), name='sincronizar'),
     path('listar/', views.PostListView.as_view(), name='listar_posts'),
     path('criar/', views.PostCreateView.as_view(), name='criar_posts'),
-    path('atualizar/<int:pk>/', views.PostUpdateView.as_view(), name='atualizar_posts'),
+    path('atualizar/<int:pk>/', views.PostUpdateView.as_view(), name='atualizar_posts'), # as chaves tem que ser primary key
     path('deletar/<int:pk>/', views.PostDeleteView.as_view(), name='deletar_posts'),
 
 ]
